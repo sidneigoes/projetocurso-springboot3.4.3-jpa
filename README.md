@@ -50,6 +50,22 @@ O projeto foi gerado com o **Spring Initializr**, utilizando as seguintes depend
 spring.profiles.active=test
 spring.jpa.open-in-view=true
 ```
+📄 `application-test.properties`:
+
+```properties
+# Configuração do banco de dados H2
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.username=sa
+spring.datasource.password=
+
+# Console do H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# Configuração JPA
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.show-sql=true
+```
 
 ## **🔥 Funcionalidades Implementadas**
 
