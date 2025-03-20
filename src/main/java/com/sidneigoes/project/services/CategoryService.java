@@ -1,6 +1,7 @@
 package com.sidneigoes.project.services;
 
 import com.sidneigoes.project.entities.Category;
+import com.sidneigoes.project.entities.User;
 import com.sidneigoes.project.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,10 @@ public class CategoryService {
     public Category findById(Long id){
         Optional<Category> obj = repository.findById(id);
         return obj.get();
+    }
+
+    public Category insert(Category obj){
+        return repository.save(obj);
     }
 
 }
